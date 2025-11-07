@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUTRA PROJECT Proxy</title>
+  <style>
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      padding-top: 10%;
+    }
+    input, button {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin: 5px;
+    }
+    input {
+      width: 60%;
+      max-width: 300px;
+    }
+    button {
+      background: #1DB954;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛰️ PUTRA PROJECT — Web Proxy</h1>
+  <p>Masukkan URL target di bawah untuk mengakses melalui proxy aman.</p>
+  <form onsubmit="goProxy(event)">
+    <input type="text" id="url" placeholder="https://example.com" required>
+    <button type="submit">Akses</button>
+  </form>
+  <script>
+    function goProxy(e) {
+      e.preventDefault();
+      const url = document.getElementById("url").value;
+      if (url) window.location.href = '/proxy?url=' + encodeURIComponent(url);
+    }
+  </script>
+</body>
+</html>

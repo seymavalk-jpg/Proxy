@@ -1,0 +1,18 @@
+{
+  "name": "putra-project-proxy",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "PUTRA PROJECT — Secure Web Proxy with Basic Authentication",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js"
+  },
+  "keywords": ["proxy", "express", "secure", "putra-project"],
+  "author": "PUTRA PROJECT",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "node-fetch": "^2.6.7"
+  }
+}
